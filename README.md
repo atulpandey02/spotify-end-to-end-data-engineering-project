@@ -1,8 +1,16 @@
-# Spotify-End-To-End-Data-Engineering-Project
+# Spotify ETL Pipeline | Serverless Data Engineering with AWS
 
 ### Introduction
 
 In this project, I built a serverless ETL pipeline using the Spotify API and AWS. It extracts playlist data via Lambda, stores raw data in S3, transforms it using another Lambda, and catalogs it with AWS Glue. The data is queried in Amazon Athena for analysis.
+
+### Features
+- End-to-End serverless ETL pipeline using Python & AWS
+- Real-time metadata extraction from Spotify API
+- Automated scheduling with CloudWatch
+- Schema inference and cataloging using AWS Glue
+- SQL querying using Amazon Athena
+
 
 ### Architecture 
 ![Architecture Diagram](https://github.com/atulpandey02/spotify-end-to-end-data-engineering-project/blob/main/Architecture%20Diagram.png)
@@ -25,8 +33,9 @@ This API contians about music artist , albums and songs - [Spotify API](https://
 ### Install Packages
 ```
 pip install pandas
-pip intall numpy
+pip install numpy
 pip install spotipy
+pip install boto3
 ```
 
 ### Project execution flow 
@@ -45,9 +54,19 @@ A second Lambda function was developed to clean and structure the raw data. I us
 5.**Schema Inference using AWS Glue Crawler**  
 I configured an AWS Glue Crawler to scan the transformed files and automatically infer schemas for each dataset. This allowed seamless integration into Athena via the Data Catalog.
 
-6.##Querying Structured Data with Amazon Athena##  
+6.**Querying Structured Data with Amazon Athena**  
 Once the data was cataloged, I used Athena to run SQL queries on top of my transformed Spotify dataset — enabling analytical insights like most popular artists or song trends over time.
 
 ### About
-This project is part of my Data Engineering learning path. It showcases practical skills in cloud-native ETL workflows, API integration, and serverless processing with AWS.
+This project is part of my Data Engineering learning path. It showcases practical skills in cloud-native ETL workflows, API integration, and serverless processing with AWS.  This project simulates a real-world data pipeline used in music analytics platforms to gain insights on artist popularity, track trends, and playlist patterns , all using scalable cloud-native services.
+
+### How to Run
+
+1. Clone the repo: `git clone https://github.com/yourname/repo-name.git`
+2. Set up AWS credentials using IAM
+3. Add your Spotify API credentials as environment variables
+4. Deploy the Lambda functions manually or with AWS SAM
+5. Trigger execution or test with `lambda_handler` locally
+
+
 
