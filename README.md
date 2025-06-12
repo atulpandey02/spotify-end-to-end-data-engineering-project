@@ -62,11 +62,16 @@ This project is part of my Data Engineering learning path. It showcases practica
 
 ### How to Run
 
-1. Clone the repo: `git clone https://github.com/yourname/repo-name.git`
+1. Clone the repo: `git clone https://github.com/atulpandey02/spotify-end-to-end-data-engineering-project`
 2. Set up AWS credentials using IAM
 3. Add your Spotify API credentials as environment variables
 4. Deploy the Lambda functions manually or with AWS SAM
 5. Trigger execution or test with `lambda_handler` locally
+
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange)
+![Status](https://img.shields.io/badge/status-complete-brightgreen)
+
 
 
 
